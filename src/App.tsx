@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { JumbotronContainer } from './containers/Jumbotron';
+
 const App = () => {
-  return <p>Welcome to Netflicks!</p>;
+  return <JumbotronContainer />;
 };
 
 export default App;

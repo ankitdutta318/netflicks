@@ -9,9 +9,9 @@ export interface IJumbotronPaneProps {
 }
 
 export interface IJumbotronPaneComposition {
-  Title?: IJumbotronTitleProps;
-  SubTitle?: IJumbotronSubTitleProps;
-  Image?: IJumbotronImageProps;
+  Title?: React.FC<IJumbotronTitleProps>;
+  SubTitle?: React.FC<IJumbotronSubTitleProps>;
+  Image?: React.FC<IJumbotronImageProps>;
 }
 
 const JumbotronPane: React.FC<IJumbotronPaneProps> &

@@ -12,12 +12,12 @@ export interface IFooterProps {
 }
 
 export interface IFooterComposition {
-  Row?: React.FC<IFooterRowProps>;
-  Column?: React.FC<IFooterColumnProps>;
-  Link?: React.FC<IFooterLinkProps>;
-  Title?: React.FC<IFooterTitleProps>;
-  Text?: React.FC<IFooterTextProps>;
-  Break?: React.FC<IFooterBreakProps>;
+  Row: React.FC<IFooterRowProps>;
+  Column: React.FC<IFooterColumnProps>;
+  Link: React.FC<IFooterLinkProps>;
+  Title: React.FC<IFooterTitleProps>;
+  Text: React.FC<IFooterTextProps>;
+  Break: React.FC<IFooterBreakProps>;
 }
 
 const Footer: React.FC<IFooterProps> & IFooterComposition = (props) => {

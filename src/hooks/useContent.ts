@@ -1,7 +1,9 @@
 import { useEffect, useState, useContext } from 'react';
 import { FirebaseContext } from '../context/auth';
 
-export default function useContent(target: 'series' | 'films'): any {
+export type TargetCategoryType = 'series' | 'films';
+
+export default function useContent(target: TargetCategoryType): any {
   const [content, setContent] = useState([]);
   const { firebase } = useContext(FirebaseContext);
 

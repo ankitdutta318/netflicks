@@ -6,7 +6,7 @@ import { Background } from './styles';
 
 interface IHeaderProps {
   bg?: boolean;
-  children: React.ReactNode;
+  children: any;
 }
 
 interface IHeaderComposition {
@@ -20,7 +20,7 @@ const Header: React.FC<IHeaderProps> & IHeaderComposition = ({
   children,
   ...restProps
 }) => {
-  return <Background {...restProps}>{children}</Background>;
+  return bg ? <Background {...restProps}>{children}</Background> : children;
 };
 
 Header.Frame = Frame;

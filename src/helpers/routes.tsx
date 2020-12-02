@@ -1,15 +1,16 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import { User } from '../types';
 
 interface IUserRedirectProps {
-  user: object | null;
+  user: User | null;
   loggedInPath: string;
   path: string;
   children: React.ReactNode;
 }
 
 interface ProtectedRouteProps {
-  user: object | null;
+  user: User | null;
   path: string;
   children: React.ReactNode;
 }

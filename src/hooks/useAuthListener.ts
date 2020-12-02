@@ -1,8 +1,13 @@
 import { useState, useEffect, useContext } from 'react';
+import { User } from './../types';
 import { FirebaseContext } from '../context/auth';
 
-export default function useAuthListener() {
-  const [user, setUser] = useState<object | null>(
+export interface IUseAuthListenerReturnType {
+  user: User | null;
+}
+
+export default function useAuthListener(): IUseAuthListenerReturnType {
+  const [user, setUser] = useState<User | null>(
     JSON.parse(localStorage.getItem('authUser') || '')
   );
   const { firebase } = useContext(FirebaseContext);
